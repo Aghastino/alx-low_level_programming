@@ -1,4 +1,6 @@
-#includ <stdio.h>
+#include <stdl ib.h>
+#include <time.h>
+#include <stdio.h>
 
 /**
  * main - Entry point
