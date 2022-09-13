@@ -1,29 +1,35 @@
-#include <stdl ib.h>
-#include <time.h>
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Prints numbers between 00 to 89.
  *
- * Description - print numbers from 0 to 99 separated by commas
- * Return: Always 0 (success)
+ * Return: Always 0 (Success)
  */
-
-	int main(void)
+int main(void)
 {
-	int n1, n2;
-	for (n1 = 0; n1 < 9; n1++)
-	{
-	for (n2 = n1 + 1; n2 < 10; n2++)
-	{
-	putchar((n1 % 10) + '0');
-	putchar((n2 % 10) + '0');
-	if (n1 == 8 && n2 == 9)
-	continue;
-	putchar(',');
-	putchar(' ');
-	}
-	}
-	putchar('\n');
-	return (0);
+		int i, e;
+		i = 48;
+		e = 48;
+		while (e < 58)
+		{
+		i = 48;
+		while (i < 58)
+		{
+		if (e != i && e < i)
+		{
+		putchar(e);
+		putchar(i);
+		if (i == 57 && e == 56)
+		{
+		break;
+		}
+		putchar(',');
+		putchar(' ');
+																																	}
+		i++;
+		}
+			e++;
+		}
+		putchar('\n');
+		return (0);
 }
