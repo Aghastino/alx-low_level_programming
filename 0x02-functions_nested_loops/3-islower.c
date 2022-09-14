@@ -3,7 +3,7 @@
 /**
  *islower - Shows 1 if the input is a
  *lowercase character. Another cases, shows
- * 0
+ * 0 if the input is in Upper charater
  *
  * @c: The character in ASCII code
  *
