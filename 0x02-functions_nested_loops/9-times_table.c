@@ -1,52 +1,34 @@
 #include "main.h"
 
 /**
- * times_table - prints tables
+ * times_table - Prints the 9 times table
  *
- * Return: Always 0.
+ * Return: Always 0 (Success)
  */
 
 void times_table(void)
-{		int a;
-		int b;
-		int c;
+{
+		int jasper, alx, op;
 
-		for (a = 0; a <= 9; a++)
+		for (jasper = 0; jasper <= 9; jasper++)
 		{
-			for (b = 0; b <= 9; b++)
+			_putchar(48);
+			for (alx = 1; alx <= 9; alx++)
 			{
-				c = a * b;
-				if ((c / 10) == 0)
+				op = jasper * alx;
+				_putchar(44);
+				_putchar(32);
+				if (op <= 9)
 				{
-					if (b == 0)
-					{
-						_putchar ('0');
-					}
-					if (b != 0)
-					{
-						_putchar(' ');
-						_putchar((c % 10) + '0');
-					}
-					if (b < 9)
-					{
-						_putchar(',');
-						_putchar(' ');
-					}
+					_putchar(32);
+					_putchar(op + 48);
 				}
 				else
 				{
-					_putchar ((c / 10) + '0');
-					_putchar ((c % 10) + '0');
-					if (b < 9)
-					{
-						_putchar(',');
-						_putchar(' ');
-					}
-				{
-				_putchar ('\n');
-				}
+					_putchar((op / 10) + 48);
+					_putchar((op % 10) + 48);
 				}
 			}
+			_putchar('\n');
 		}
 }
-
