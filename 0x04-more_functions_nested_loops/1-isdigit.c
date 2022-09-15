@@ -1,13 +1,19 @@
 #include "main.h"
 
 /**
- * mul - multiplies 2 nums
- * @a: first param
- * @b: second param
- * Return: something
+ * _isdigit - checks for digits
+ * @c: parameter
+ * Return: 0 or 1
  */
 
-int mul(int a, int b)
+int _isdigit(int c)
 {
-		return (a * b);
+	if (c >= 48 && c < 58)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
