@@ -1,21 +1,24 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * puts2 - Entry point to our function
- * @str: a pointer variable that takes string
- * Return: 0. For Success
+ * puts2 - prints one char out of 2 of a string.
+ * @str: input string.
+ * Return: no return.
  */
 
 void puts2(char *str)
 {
-	int counter = 0;
-	
-	while (str[counter] != '\0')
+	int count = 0;
+
+	while (count >= 0)
 	{
-		if (counter % 2 == 0)
-			_putchar(*(str + counter));
-		counter++;
+		if (str[count] == '\0')
+		{
+			_putchar('\n');
+			break;
+		}
+		if (count % 2 == 0)
+			_putchar(str[count]);
+		count++;
 	}
-	_putchar(10);
 }
