@@ -1,29 +1,55 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
-*main - This program demonstrates the argument to main
-*arguments to main provide a useful opportunity to
-*give parameters to programs.
-*
-*@argc: Called ARGumentCount, it counts the arguments
-*supplied to the program
-*
-*@argv: is a pointer array which points to each
-*argument passed to the program.
-*
-*Description - the program prints all arguments it receives.
-*
-*Return: 0 if successful
-*/
+ * str_concat - concatenates two strings
+ *
+ * @s1: the first string
+ * @s2: the second string
+ *
+ * Return: a pointer to the newly concatenated string
+ */
 
-int main(int argc, char *argv[])
+char *str_concat(char *s1, char *s2)
 {
-	int i;
+	int s1_len = 0, s2_len = 0, i = 0, j = 0;
+	char *str;
 
-	for (i = 0; i < argc; i++)
+	if (s1 == NULL)
 	{
-		printf("%s\n", argv[i]);
+		s1_len = 1;
 	}
-	return (0);
+	else if (s2 == NULL)
+	{
+		s2_len = 1;
+	}
+	else
+	{
+		while (s1[s1_len])
+		{
+			s1_len++;
+		}
+
+		while (s2[s2_len])
+		{
+			s2_len++;
+		}
+	}
+
+	str = (char *) malloc((sizeof(char) * s1_len) + (sizeof(char) * s2_len) + 1);
+
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	for (; i < s1_len; i++)
+	{
+		str[i] = s1[i];
+	}
+	for (; j < s2_len; j++, i++)
+	{
+		str[i] = s2[j];
+	}
+	return (str);
 }
